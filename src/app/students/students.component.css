@@ -1,0 +1,16 @@
+.form-border{
+	border: 1px solid black;
+}
+
+.student-hover:hover{
+	background-color: #0C2340;
+	color: white;
+}
+
+.margin-bottom{
+	margin-bottom: 20px !important;
+}
+
+.form-border-light{
+	border: 1px solid #EDEDED;
+}

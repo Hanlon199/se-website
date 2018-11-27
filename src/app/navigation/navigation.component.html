@@ -1,0 +1,31 @@
+<style type="text/css">
+  .white{
+    color: white !important;
+    font-size: 24px;
+    font-family: Georgia;
+  }
+
+  .white:hover{
+    background-color: #174987;
+  }
+
+  .active{
+    color: #2285FF !important;
+  }
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #0C2340 !important;">
+  <a class="navbar-brand" href="home"><img height="100" width="100" src="includes/img/qu_3.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a [ngClass]="[currentPath == 'home' || currentPath == ''? 'active' : '']" class="nav-item nav-link white" href="home">Home</a>
+      <a [ngClass]="[currentPath == 'classes'? 'active' : '']" class="nav-item nav-link white" href="classes">Classes</a>
+      <a [ngClass]="[currentPath == 'accolades'? 'active' : '']" class="nav-item nav-link white" href="accolades">Accolades</a>
+      <a [ngClass]="[currentPath == 'students'? 'active' : '']" class="nav-item nav-link white" href="students">Students</a>
+      <a [ngClass]="[currentPath == 'faculty'? 'active' : '']" class="nav-item nav-link white" href="faculty">Faculty</a>
+    </div>
+  </div>
+</nav>
