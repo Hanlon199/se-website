@@ -1,97 +1,39 @@
-<div class="container">
-<ngb-tabset>
-  <ngb-tab title="Freshmen">
-    <ng-template ngbTabContent>
-     <div class="row" style="margin-left: 2px;">
-      	<div class="col-md-2">
-      		<table class="table table-hover table-bordered">
-      			<tr><td>class 1</td></tr>
-      			<tr><td>class 2</td></tr>
-      			<tr><td>class 3</td></tr>
-      			<tr><td>class 4</td></tr>
-      			<tr><td>class 5</td></tr>
-      			<tr><td>class 6</td></tr>
-      		</table>
-      	</div>
-      	<div class="col-md-8" style="border: 1px solid #EDEDED;">
-      		<h3>Class Info</h3>
-      		<img width="100%" height="500px;" src="includes/img/placeholder.png">
-      		<div>
-      			
-      		</div>
-      	</div>
+<div class="main-container">
+  <div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a [ngClass]="[year == 1? 'active' : '']" class="nav-link" (click)="showYear(1)">Freshmen Year</a>
+    </li>
+    <li class="nav-item">
+      <a [ngClass]="[year == 2? 'active' : '']" class="nav-link" (click)="showYear(2)">Sophomore Year</a>
+    </li>
+    <li class="nav-item">
+      <a [ngClass]="[year == 3? 'active' : '']" class="nav-link" (click)="showYear(3)">Junior Year</a>
+    </li>
+    <li class="nav-item">
+      <a [ngClass]="[year == 4? 'active' : '']" class="nav-link" (click)="showYear(4)">Senior Year</a>
+    </li>
+  </ul>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <table class="table table-bordered table-hover col-md-2">
+          <tbody *ngFor="let class of classes ">
+            <tr class="hover" (click)="showInfo(class)"><td style="padding-right: 150px !important;">{{class}}</td></tr>
+          </tbody>
+        </table>
       </div>
-    </ng-template>
-  </ngb-tab>
-  <ngb-tab title="Sophomore">
-    <ng-template ngbTabContent>
-      <div class="row" style="margin-left: 2px;">
-      	<div class="col-md-2">
-      		<table class="table table-hover table-bordered">
-      			<tr><td>class 1</td></tr>
-      			<tr><td>class 2</td></tr>
-      			<tr><td>class 3</td></tr>
-      			<tr><td>class 4</td></tr>
-      			<tr><td>class 5</td></tr>
-      			<tr><td>class 6</td></tr>
-      		</table>
-      	</div>
-      	<div class="col-md-8" style="border: 1px solid #EDEDED;">
-      		<h3>Class Info</h3>
-      		<img width="100%" height="500px;" src="includes/img/placeholder.png">
-      		<div>
-      			
-      		</div>
-      	</div>
+      <div class="col-md-10">
+        <div>
+          <label>{{classSelected.name}}</label>
+          <img height="400" width="100%" src="includes/img/placeholder.png">          
+          <div style="background-color: #E3E3E3;border: 1px solid black">
+            <p>{{classSelected.info}}</p>
+          </div>
+        </div>
       </div>
-    </ng-template>
-  </ngb-tab>
-  <ngb-tab title="Junior">
-    <ng-template ngbTabContent>
-     <div class="row" style="margin-left: 2px;">
-      	<div class="col-md-2">
-      		<table class="table table-hover table-bordered">
-      			<tr><td>class 1</td></tr>
-      			<tr><td>class 2</td></tr>
-      			<tr><td>class 3</td></tr>
-      			<tr><td>class 4</td></tr>
-      			<tr><td>class 5</td></tr>
-      			<tr><td>class 6</td></tr>
-      		</table>
-      	</div>
-      	<div class="col-md-8" style="border: 1px solid #EDEDED;">
-      		<h3>Class Info</h3>
-      		<img width="100%" height="500px;" src="includes/img/placeholder.png">
-      		<div>
-      			
-      		</div>
-      	</div>
-      </div>
-    </ng-template>
-  </ngb-tab>  
-  <ngb-tab title="Senior">
-    <ng-template ngbTabContent>
-      <div class="row" style="margin-left: 2px;">
-      	<div class="col-md-2">
-      		<table class="table table-hover table-bordered">
-      			<tr><td>class 1</td></tr>
-      			<tr><td>class 2</td></tr>
-      			<tr><td>class 3</td></tr>
-      			<tr><td>class 4</td></tr>
-      			<tr><td>class 5</td></tr>
-      			<tr><td>class 6</td></tr>
-      		</table>
-      	</div>
-      	<div class="col-md-8" style="border: 1px solid #EDEDED;">
-      		<h3>Class Info</h3>
-      		<img width="100%" height="500px;" src="includes/img/placeholder.png">
-      		<div>
-      			
-      		</div>
-      	</div>
-      </div>
-    </ng-template>
-  </ngb-tab>
-</ngb-tabset>
+    </div>
+  </div>
+  <app-footer class="footer"></app-footer>
 </div>
-<app-footer></app-footer>

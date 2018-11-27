@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-
-  constructor() { }
+	students: any;
+  constructor() {
+  	this.students = [{"name":"....", "info":"..."},{"name":"....", "info":"..."},{"name":"....", "info":"..."},{"name":"....", "info":"..."}]
+  }
 
   ngOnInit() {
   }

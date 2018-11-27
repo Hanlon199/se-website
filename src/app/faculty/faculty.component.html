@@ -1,63 +1,37 @@
-<div class="container">
-	<table class="table">
-		<tr>
-			<td>
-				<div class="card hover-faculty" style="width: 18rem;">
-				  <img class="card-img-top" src="includes/img/placeholder.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Faculty Name Here </h5>
-				    <p class="card-text">Professor info</p>
-				  </div>
-				</div>
-			</td>
-			<td>
-				<div class="card hover-faculty" style="width: 18rem;">
-				  <img class="card-img-top" src="includes/img/placeholder.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Faculty Name Here </h5>
-				    <p class="card-text">Professor info</p>
-				  </div>
-				</div>
-			</td>
-			<td>
-				<div class="card hover-faculty" style="width: 18rem;">
-				  <img class="card-img-top" src="includes/img/placeholder.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Faculty Name Here </h5>
-				    <p class="card-text">Professor info</p>
-				  </div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="card hover-faculty" style="width: 18rem;">
-				  <img class="card-img-top" src="includes/img/placeholder.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Faculty Name Here </h5>
-				    <p class="card-text">Professor info</p>
-				  </div>
-				</div>
-			</td>
-			<td>
-				<div class="card hover-faculty" style="width: 18rem;">
-				  <img class="card-img-top" src="includes/img/placeholder.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Faculty Name Here </h5>
-				    <p class="card-text">Professor info</p>
-				  </div>
-				</div>
-			</td>
-			<td>
-				<div class="card hover-faculty" style="width: 18rem;">
-				  <img class="card-img-top" src="includes/img/placeholder.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Faculty Name Here </h5>
-				    <p class="card-text">Professor info</p>
-				  </div>
-				</div>
-			</td>
-		</tr>
-	</table>
+<div class="main-container">
+	<div class="container">
+		<table class="table">
+			<tr>
+				<td *ngFor="let faculty of faculty">
+					<div class="card hover-faculty" style="width: 18rem;">
+					  <img class="card-img-top" src="{{faculty.img}}" alt="Card image cap">
+					  <div class="card-body">
+					    <h5 class="card-title">{{faculty.name}}</h5>
+					    <ul style="list-style: none;">
+					    	<li>Title: {{faculty.title}}</li>
+					    	<li>Email: {{faculty.email}}</li>
+					    	<li>Info: {{faculty.info}}</li>
+					    </ul>
+					  </div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td *ngFor="let faculty of faculty2">
+					<div class="card hover-faculty" style="width: 18rem;">
+					  <img class="card-img-top" src="{{faculty.img}}" alt="Card image cap">
+					  <div class="card-body">
+					    <h5 class="card-title">{{faculty.name}}</h5>
+					    <ul style="list-style: none;">
+					    	<li>Title: {{faculty.title}}</li>
+					    	<li>Email: {{faculty.email}}</li>
+					    	<li>Info: {{faculty.info}}</li>
+					    </ul>
+					  </div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+<app-footer class="footer"></app-footer>
 </div>
-<app-footer></app-footer>
