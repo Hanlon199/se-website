@@ -5,6 +5,18 @@
     font-family: Georgia;
   }
 
+  .hover{
+    color: black !important;
+    font-size: 18px;
+    font-family: Georgia;
+  }
+  .hover:hover{
+    background-color: #174987;
+    color: white !important;
+    font-size: 18px;
+    font-family: Georgia;
+  }
+
   .white:hover{
     background-color: #174987;
   }
@@ -27,5 +39,7 @@
       <a [ngClass]="[currentPath == 'students'? 'active' : '']" class="nav-item nav-link white" href="students">Students</a>
       <a [ngClass]="[currentPath == 'faculty'? 'active' : '']" class="nav-item nav-link white" href="faculty">Faculty</a>
     </div>
+    <app-application-modal style="margin-left: 62%;"></app-application-modal>
   </div>
 </nav>
+

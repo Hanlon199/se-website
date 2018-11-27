@@ -1,0 +1,11 @@
+.hover{
+    color: black !important;
+    font-size: 18px;
+    font-family: Georgia;
+  }
+  .hover:hover{
+    background-color: #174987;
+    color: white !important;
+    font-size: 18px;
+    font-family: Georgia;
+  }

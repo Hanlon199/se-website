@@ -12,6 +12,7 @@ import { StudentsComponent } from './students/students.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ApplicationModalComponent } from './application-modal/application-modal.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     StudentsComponent,
     NavigationComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    ApplicationModalComponent
   ],
   imports: [
     BrowserModule,
