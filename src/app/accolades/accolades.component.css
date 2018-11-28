@@ -13,3 +13,7 @@
 .active{
 	background-color: #CECECE;
 }
+
+.form-border{
+	border: 1px solid black;
+}

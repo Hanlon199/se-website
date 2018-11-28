@@ -1,5 +1,5 @@
-<div class="main-container">
-  <div class="container">
+<div class="main-container"  style="background-image: url('includes/img/wallpaper_1.jpg');">
+  <div class="container" style="background-color: white; height: 100% !important;">
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a [ngClass]="[year == 1? 'active' : '']" class="nav-link" (click)="showYear(1)">Freshmen Year</a>
@@ -15,19 +15,19 @@
     </li>
   </ul>
   </div>
-  <div class="container">
+  <div class="container" style="background-color: white; height: 100% !important;">
     <div class="row">
       <div class="col-md-2">
         <table class="table table-bordered table-hover col-md-2">
           <tbody *ngFor="let class of classes ">
-            <tr class="hover" (click)="showInfo(class)"><td style="padding-right: 150px !important;">{{class}}</td></tr>
+            <tr class="hover" (click)="showInfo(class)"><td style="padding-right: 120px !important;">{{class}}</td></tr>
           </tbody>
         </table>
       </div>
       <div class="col-md-10">
         <div>
-          <label>{{classSelected.name}}</label>
-          <img height="400" width="100%" src="includes/img/placeholder.png">          
+          <h2>{{classSelected.name}}</h2>
+          <img height="500" width="100%" src="{{classSelected.img}}">          
           <div style="background-color: #E3E3E3;border: 1px solid black">
             <p>{{classSelected.info}}</p>
           </div>

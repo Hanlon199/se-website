@@ -11,7 +11,7 @@ export class ApplicationModalComponent {
 	lastname:string;
 	dob:any;
 	complete: boolean = false;
-   closeResult: string;
+  closeResult: string;
 
   constructor(private modalService: NgbModal) {}
 

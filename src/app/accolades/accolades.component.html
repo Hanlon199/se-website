@@ -1,19 +1,20 @@
-<div class="main-container">
-	<div class="container">
+<div class="main-container"  style="background-image: url('includes/img/wallpaper_1.jpg');">
+	<div class="container" style="background-color: white; height: 100% !important;">
 		<div class="row">
 			<div class="col-md-2">
 				<table class="table table-hover table-bordered">
-					<tr [ngClass]="[view == 0? 'active' : '']" (click)="viewInfo(0)"><td style="padding: 50px 14px 50px 50px !important;">Awards</td></tr>
-					<tr [ngClass]="[view == 1? 'active' : '']" (click)="viewInfo(1)"><td style="padding: 50px 14px 50px 50px !important;">Internships</td></tr>
-					<tr [ngClass]="[view == 2? 'active' : '']" (click)="viewInfo(2)"><td style="padding: 50px 14px 50px 50px !important;">Competitions</td></tr>
-					<tr [ngClass]="[view == 3? 'active' : '']" (click)="viewInfo(3)"><td style="padding: 50px 14px 50px 50px !important;">Accomplishments</td></tr>
-					<tr [ngClass]="[view == 4? 'active' : '']" (click)="viewInfo(4)"><td style="padding: 50px 14px 50px 50px !important;">Clubs</td></tr>
+					<tr [ngClass]="[view == 0? 'active' : '']" (click)="viewInfo(0)"><td style="padding: 50px 2px 50px 50px !important;">Awards</td></tr>
+					<tr [ngClass]="[view == 1? 'active' : '']" (click)="viewInfo(1)"><td style="padding: 50px 2px 50px 50px !important;">Internships</td></tr>
+					<tr [ngClass]="[view == 2? 'active' : '']" (click)="viewInfo(2)"><td style="padding: 50px 2px 50px 50px !important;">Competitions</td></tr>
+					<tr [ngClass]="[view == 3? 'active' : '']" (click)="viewInfo(3)"><td style="padding: 50px 2px 50px 50px !important;">Accomplishments</td></tr>
+					<tr [ngClass]="[view == 4? 'active' : '']" (click)="viewInfo(4)"><td style="padding: 50px 2px 50px 50px !important;">Clubs</td></tr>
 				</table>
 			</div>
-			<div class="col-md-8"  style="margin-left: 1px;">
-				<img width="100%" height="500px;" src="{{info.img}}">
+			<div class="col-md-8"  style="border: 1px solid #E3E3E3">
+				<img width="100%" height="450px;" src="{{info.img}}">
 				<div class="form-border"></div>
 				<h3>{{info.name}}</h3>
+				<div class="form-border"></div>
 				<p>{{info.info}}</p>
 			</div>
 		</div>
